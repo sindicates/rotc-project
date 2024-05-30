@@ -1,0 +1,191 @@
+
+.splash {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 200;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+
+    background-image: url("backgroundImage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+}
+
+.mainScreen{
+    background-image: url("backgroundImage.jpg");
+    background-size: cover;
+    background-position: 100%100%;
+    
+    
+    
+}
+.header{
+    width: 150px;
+    height: 100px;
+    
+}
+.splash.display-none{
+    opacity: 0;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 0.5s;
+
+}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+    }
+}
+
+.fade-in{
+    
+    opacity: 0;
+    font-size: 100px;
+    animation: fadeIn 1s ease-in forwards;
+    
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    height: 50vh;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+    min-width: 300px;
+    opacity:0.5;
+    font-size: 50px;
+    text-align: center;
+    
+    background-color: blue;
+    transition: 0.15s;
+    z-index: 100;
+    color: white;
+  }
+
+  .box:hover{
+    transform: scale(1.05);
+    opacity: .8;
+    background: red;
+
+  }
+
+.box::after{
+    content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  }
+
+  .box:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  
+  }
+
+
+  .optionScreen{
+    background-image: url("backgroundImage.jpg");
+    background-size: cover;
+    background-position: 100%100%;
+  }
+
+
+
+.homeIcon {
+  position: absolute;
+  top:46%;
+  left:46%;
+  width:200px;
+  height: 200px;
+  background-image: white;
+  z-index: 180;
+  
+}
+
+.homeIcon:hover {
+  transform: scale(1.05);
+  opacity: .8;
+  background: red;
+
+}
+
+.homeIcon::after {
+
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #0087ca;
+transform-origin: bottom right;
+transition: transform 0.25s ease-out;
+}
+
+.homeIcon:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+
+}
+
+
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.info{
+  font-size: 50px;
+  background-color: lightblue;
+}
+.textContainer {
+  margin-bottom: 20px; /* Adjust margin to bring textContainer closer to imageContainer */
+  font-size: 100px
+}
+
+.imageContainer {
+  margin-top: 20px; /* Adjust margin to create space between textContainer and imageContainer */
+
+}
+
+.imageContainer img {
+  width: 100%; /* Adjust width as desired */
+  height: 100%; /* Adjust height as desired */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .textContainer,
+  .imageContainer {
+    margin: 10px; /* Adjust margins for smaller screens */
+  }
+}
